@@ -37,7 +37,7 @@ public class ForecastAdapter
     //  (1) Add an interface called ForecastAdapterOnClickHandler
     //  (2) Within that interface, define a void method that access a String as a parameter
     public interface ForecastAdapterOnClickHandler {
-        void stringMethod(String stringItem);
+        void itemClicked(String stringItem);
     }
 
     //  (4) Add a ForecastAdapterOnClickHandler as a parameter to the constructor and store it in mClickHandler
@@ -67,7 +67,7 @@ public class ForecastAdapter
         public void onClick(View view) {
             int clickedItemPosition = getAdapterPosition();
             String clickedData = mWeatherData[clickedItemPosition];
-            mClickHandler.stringMethod(clickedData);
+            mClickHandler.itemClicked(clickedData);
         }
     }
 
